@@ -2,68 +2,67 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding and borders don't increase element width/height */
 }
 
 :root {
-    --primary-color: #333333;
-    --secondary-color: pink;
-    --text-color: #333333;
-    --accent-color: pink;
+    /* CSS Variables for Consistent Colors */
+    --primary-color: #333333; /* Dark gray for text and footer */
+    --secondary-color: pink; /* Pink used as accent color */
+    --text-color: #333333; /* Default text color */
+    --accent-color: pink; /* Accent color for various elements */
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: var(--text-color);
-    background-color: #FFF5EE;
+    font-family: Arial, sans-serif; /* Sets default font */
+    color: var(--text-color); /* Applies default text color */
+    background-color: #FFF5EE; /* Light cream background for the page */
 }
 
 /* Header */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Aligns items with space in between */
     align-items: center;
-    background-color: #95acaa;
-    padding: 1.5rem 2rem;
+    background-color: #95acaa; /* Soft teal for header background */
+    padding: 1.5rem 2rem; /* Adds spacing around header content */
     color: white;
 }
 
 header h1 {
-        font-size: 3rem;
-        font-family: 'Crimson Text', serif;
-        font-weight: 400;
-        color: #fdf4e3;
-    }
-    
-
+    font-size: 3rem; /* Larger font size for name in header */
+    font-family: 'Crimson Text', serif; /* Custom font for a classic look */
+    font-weight: 400; /* Regular font weight */
+    color: #fdf4e3; /* Light cream color for contrast */
+}
 
 header nav ul {
-    display: flex;
-    list-style-type: none;
+    display: flex; /* Arranges nav links in a row */
+    list-style-type: none; /* Removes default bullet points */
 }
 
 header nav ul li {
-    margin-left: 2rem;
+    margin-left: 2rem; /* Space between each nav link */
 }
 
 header nav ul li a {
-    color: #fdf4e3;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
+    color: #fdf4e3; /* Light color to contrast with header background */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Makes links bolder */
+    font-size: 1.1rem; /* Adjusts font size */
 }
 
 header nav ul li a:hover {
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color); /* Adds pink underline on hover */
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('image.png'); /* Replace with actual image */
-    background-size: cover;
-    background-position: center;
+    background-image: url('image.png'); /* Background image for hero section */
+    background-size: cover; /* Ensures image covers entire area */
+    background-position: center; /* Centers the background image */
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem; /* Padding around the hero content */
     color: white;
 }
 
@@ -73,46 +72,45 @@ header nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -1; /* Sends the background image behind other content */
+    object-fit: cover; /* Ensures image maintains aspect ratio */
+    z-index: -1; /* Places background image behind other elements */
 }
 
 .profile-picture {
     position: relative;
-    z-index: 1; /* Ensures the profile picture appears above the background */
-    width: 250px; /* Adjust size as needed */
-    height: 250px; /* Keep it square for a circular crop */
-    border-radius: 50%; /* Makes the image circular */
-    border: 4px solid #fdf4e3; /* Adds a border around the profile image */
+    z-index: 1; /* Brings profile picture above background */
+    width: 250px; /* Width for profile image */
+    height: 250px; /* Ensures a square image for circular crop */
+    border-radius: 50%; /* Circular profile image */
+    border: 4px solid #fdf4e3; /* Cream border around profile image */
     margin-top: -75px; /* Adjust to overlap it over the background */
-    margin-top: 1rem; /* Adds space below the profile picture */
 }
 
 .hero .subtitle {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color); /* Pink background for subtitle */
     display: inline-block;
     padding: 1rem;
     font-size: 1.5rem;
-    color: #3e424b;
+    color: #3e424b; /* Dark gray text color */
     font-weight: bold;
-    margin-top: 1rem;
+    margin-top: 1rem; /* Space above subtitle */
 }
 
 /* Content Sections */
 .content-section {
     max-width: 800px;
-    margin: 2rem auto;
+    margin: 2rem auto; /* Centers section on the page */
     padding: 2rem;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white; /* White background for section blocks */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 #about h2, #work h2 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+    font-size: 2.5rem; /* Large heading for sections */
+    color: var(--primary-color); /* Dark gray color */
     display: inline-block;
-    border-right: 3px solid var(--accent-color);
-    margin-bottom: 1rem;
+    border-right: 3px solid var(--accent-color); /* Accent line on the right */
+    margin-bottom: 1rem; /* Space below heading */
 }
 
 #about h2 span {
@@ -124,57 +122,58 @@ header nav ul li a:hover {
 /* Work Gallery */
 .work-gallery {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
+    flex-wrap: wrap; /* Allows projects to wrap to the next line if needed */
+    gap: 1.5rem; /* Space between projects */
+    justify-content: center; /* Centers projects within the section */
 }
 
 .project {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* Pink background for project cards */
     padding: 1rem;
-    flex: 1 1 300px;
+    flex: 1 1 300px; /* Responsive sizing */
     text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; /* Rounded corners for project cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
 }
 
 .project img {
     max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+    height: auto; /* Ensures images are responsive */
+    border-radius: 5px; /* Rounded corners for images */
 }
 
 /* Footer */
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Dark gray background for footer */
     color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
+    margin-top: 2rem; /* Space above footer */
     font-size: 1rem;
 }
 
 /* Responsive Styling */
 @media (max-width: 768px) {
     header nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Stacks nav links on smaller screens */
         gap: 1rem;
     }
 
     .hero {
-        padding: 3rem 1.5rem;
+        padding: 3rem 1.5rem; /* Increases padding on small screens */
     }
 
     .work-gallery {
-        flex-direction: column;
+        flex-direction: column; /* Stacks project cards vertically */
     }
 }
+
 /* Contact Section */
 #contact h2 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Heading size for Contact section */
     color: var(--primary-color);
     display: inline-block;
-    border-right: 3px solid var(--accent-color);
+    border-right: 3px solid var(--accent-color); /* Accent line for heading */
     margin-bottom: 1rem;
 }
 
@@ -187,35 +186,35 @@ footer {
 form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1rem; /* Space between form elements */
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centers form within section */
 }
 
 form label {
     font-weight: bold;
-    color: var(--text-color);
+    color: var(--text-color); /* Dark text color */
 }
 
 form input, form textarea {
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 0.75rem; /* Padding within input fields */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners for input fields */
     font-size: 1rem;
     color: var(--text-color);
 }
 
 form button {
     padding: 0.75rem;
-    background-color: var(--accent-color);
+    background-color: var(--accent-color); /* Pink background for button */
     color: white;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
     font-size: 1.1rem;
     font-weight: bold;
 }
 
 form button:hover {
-    background-color: #89c3ce;
+    background-color: #89c3ce; /* Light blue on hover */
 }
